@@ -3,7 +3,6 @@ import signImagesInANSObject from ".";
 const data = {
 	_id: "43UU6MCQERAMRPTD23B3CEXE7E",
 	type: "story",
-	undefinedValue: undefined,
 	content_elements: [
 		{
 			_id: "LJJSIEXMZ5FTDBP7PFHXI5A4XY",
@@ -126,9 +125,12 @@ const idAuthMap = {
 	},
 };
 
-const fetcher = jest.fn((id) => idAuthMap[id]);
+const fetcher = jest.fn((id) => Promise.resolve(idAuthMap[id]));
 const cachedCall = jest.fn((cacheId, fetchMethod, options) =>
 	Promise.resolve(fetchMethod(options.query.id)),
+);
+const failingCachedCall = jest.fn((cacheId, fetchMethod, options) =>
+	Promise.reject(fetchMethod(options.query.id)),
 );
 
 describe("Sign Images In ANS Object", () => {
@@ -272,5 +274,15 @@ describe("Sign Images In ANS Object", () => {
 		});
 
 		expect(signedData.ansImage).toBeUndefined();
+	});
+
+	it("returns unmodified data for a failing fetch service", async () => {
+		const signIt = signImagesInANSObject(failingCachedCall, fetcher, 2);
+
+		const { data: signedData } = await signIt({ data });
+
+		expect(failingCachedCall).toHaveBeenCalledTimes(3);
+
+		expect(signedData).toMatchObject(data);
 	});
 });
