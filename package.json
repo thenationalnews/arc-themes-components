@@ -1,10 +1,10 @@
 {
-  "name": "@wpmedia/arc-themes-components",
+  "name": "@thenationalnews/arc-themes-components",
   "author": "",
   "license": "CC-BY-NC-ND-4.0",
-  "version": "0.0.4-arc-themes-release-version-2-5-2.1",
+  "version": "arc-themes-release-version-2-5-2",
   "description": "The arc-themes-components will be the basis for presentational components and reusable utility functions workflow of themes and client devs. A core tenet of Themes is composability for developers.",
-  "homepage": "https://github.com/WPMedia/arc-themes-components#readme",
+  "homepage": "https://github.com/thenationalnews/arc-themes-components#readme",
   "keywords": [
     "themes"
   ],
@@ -17,10 +17,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WPMedia/arc-themes-components.git"
+    "url": "git+https://github.com/thenationalnews/arc-themes-components.git"
   },
   "bugs": {
-    "url": "https://github.com/WPMedia/arc-themes-components/issues"
+    "url": "https://github.com/thenationalnews/arc-themes-components/issues"
   },
   "scripts": {
     "build-storybook": "storybook build",
@@ -42,8 +42,8 @@
     "*": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
-    "@arc-publishing/sdk-identity": "github:WPMedia/arc-themes-components",
-    "@arc-publishing/sdk-sales": "github:WPMedia/arc-themes-components",
+    "@arc-publishing/sdk-identity": "github:thenationalnews/arc-themes-components",
+    "@arc-publishing/sdk-sales": "github:thenationalnews/arc-themes-components",
     "@babel/core": "^7.23.2",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
@@ -111,8 +111,8 @@
     "stylelint-use-logical": "^2.1.2xs"
   },
   "dependencies": {
-    "@arc-publishing/sdk-identity": "github:WPMedia/arc-themes-components",
-    "@arc-publishing/sdk-sales": "github:WPMedia/arc-themes-components",
+    "@arc-publishing/sdk-identity": "github:thenationalnews/empty",
+    "@arc-publishing/sdk-sales": "github:thenationalnews/empty",
     "dom-parser": "^0.1.6",
     "lazy-child": "^0.3.1",
     "lodash.get": "^4.4.2",
