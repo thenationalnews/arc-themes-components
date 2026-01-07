@@ -2,7 +2,7 @@
   "name": "@thenationalnews/arc-themes-components",
   "author": "",
   "license": "CC-BY-NC-ND-4.0",
-  "version": "arc-themes-release-version-4-0-1",
+  "version": "4.0.1",
   "description": "The arc-themes-components will be the basis for presentational components and reusable utility functions workflow of themes and client devs. A core tenet of Themes is composability for developers.",
   "homepage": "https://github.com/thenationalnews/arc-themes-components#readme",
   "keywords": [
